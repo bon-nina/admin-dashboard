@@ -14,7 +14,7 @@
 
 body {
     display: grid;
-    grid-template: 1fr 6fr / 1fr 4fr;
+    grid-template: 1fr 6fr / clamp(250px, 20vw , 350px) 1fr;
     height: 100vh;
     width: 100vw;
 }
@@ -65,14 +65,14 @@ main {
     -webkit-box-shadow: inset 0px 4px 4px 0px rgba(155,155,155,0.67); 
     box-shadow: inset 0px 4px 4px 0px rgba(155,155,155,0.67);
     display: grid;
-    grid-template: repeat(2, 1fr) / 3fr 1fr;
+    grid-template: 2fr 3fr / 5fr 2fr;
+    gap: 20px;
 }
 
 .container-projects {
-    height: 100%;
-    width: 100%;
+    height: 900px;
     grid-area: 1 / 1 / 3 / 2;
-    margin: 20px;
+    margin: 20px 0px 0px 20px;
 }
 
 .project-grid {
@@ -84,9 +84,9 @@ main {
 .project-card {
     display: grid;
     grid-template-rows: 2fr 1fr;
-    height: 250px;
     background-color: var(--color-cards);
     border-radius: 10px;
+    height: 250px;
 }
 
 h3 {
@@ -104,6 +104,55 @@ h3 {
 
 .project-description {
     color: var(--color-sec-writing);
+}
+
+.announcements {
+    grid-area: 1 / 2 / 2 / 3;
+    margin: 20px 20px 0px 0px;
+}
+
+.feed, 
+.users {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    background-color: var(--color-cards);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.news-description {
+    color: var(--color-sec-writing);
+    font-size: 0.9rem;
+}
+
+.news-title {
+    font-weight: bold;
+    font-size: 0.9rem;;
+}
+
+.trending {
+    grid-area: 2 / 2 / 3 / 3;
+    margin: 0px 20px 0px 0px;
+}
+
+.users {
+    padding: 25px;
+}
+
+.user {
+    padding: 10px 0px;
+    display: flex;
+    gap: 10px;
+}
+
+.user-tag {
+    font-size: 0.8rem;
+}
+
+.user-project {
+    color: var(--color-sec-writing);
+    font-size: 0.8rem;
 }
 
 .sidebar {
