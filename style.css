@@ -8,6 +8,8 @@
     --color-main: lightgrey;
     --color-nav-items: white;
     --color-button: teal;
+    --color-cards: white;
+    --color-sec-writing: grey;
 }
 
 body {
@@ -62,6 +64,46 @@ main {
     grid-area: 2 / 2 / 3 / 3;
     -webkit-box-shadow: inset 0px 4px 4px 0px rgba(155,155,155,0.67); 
     box-shadow: inset 0px 4px 4px 0px rgba(155,155,155,0.67);
+    display: grid;
+    grid-template: repeat(2, 1fr) / 3fr 1fr;
+}
+
+.container-projects {
+    height: 100%;
+    width: 100%;
+    grid-area: 1 / 1 / 3 / 2;
+    margin: 20px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    height: 250px;
+    background-color: var(--color-cards);
+    border-radius: 10px;
+}
+
+h3 {
+    padding: 10px;
+}
+
+.project-title, .project-description {
+    padding: 25px;
+    padding-bottom: 0px;
+}
+
+.project-title {
+    font-weight: bold;
+}
+
+.project-description {
+    color: var(--color-sec-writing);
 }
 
 .sidebar {
