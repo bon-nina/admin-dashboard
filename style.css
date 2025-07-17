@@ -10,6 +10,8 @@
     --color-button: teal;
     --color-cards: white;
     --color-sec-writing: grey;
+    --color-icon-one: invert(93%) sepia(92%) saturate(29%) hue-rotate(238deg) brightness(106%) contrast(100%);
+    --color-icon-two: invert(20%) sepia(7%) saturate(34%) hue-rotate(322deg) brightness(91%) contrast(84%);
 }
 
 body {
@@ -29,10 +31,35 @@ header {
 
 .container-search {
     grid-area: 1 / 1 / 2 / 2;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: start;
     gap: 20px;
+}
+
+.search-icon{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="search"] {
+    border-radius: 15px;
+    height: 30px;
+    width: 300px;
+    background-color: var(--color-main);
+    border-style: none;
+}
+
+.search-icon img,
+.notification-icon,
+.acc-icon-small {
+    height: 25px;
+    filter: var(--color-icon-two);
+}
+
+.acc-icon-big {
+    height: 50px;
 }
 
 .container-account {
@@ -59,14 +86,27 @@ header {
     gap: 20px;
 }
 
+button {
+    width: 75px;
+    height: 30px;
+    border-radius: 15px;
+    border-style: none;
+    color: var(--color-header);
+    background-color: var(--color-sidebar);
+}
+
 main {
     background-color: var(--color-main);
+}
+
+.container {
     grid-area: 2 / 2 / 3 / 3;
     -webkit-box-shadow: inset 0px 4px 4px 0px rgba(155,155,155,0.67); 
     box-shadow: inset 0px 4px 4px 0px rgba(155,155,155,0.67);
     display: grid;
     grid-template: 2fr 3fr / 5fr 2fr;
     gap: 20px;
+    height: 80%;
 }
 
 .container-projects {
@@ -104,6 +144,19 @@ h3 {
 
 .project-description {
     color: var(--color-sec-writing);
+}
+
+.project-ui {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 15px;
+    margin-right: 25px;
+}
+
+.project-ui img {
+    height: 20px;
+    filter: var(--color-icon-two);
 }
 
 .announcements {
@@ -155,6 +208,10 @@ h3 {
     font-size: 0.8rem;
 }
 
+.user img {
+    height: 50px;
+}
+
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -162,6 +219,16 @@ h3 {
     grid-area: 1 / 1 / 3 / 2;
     color: var(--color-nav-items);
     font-weight: bold;
+}
+
+.dashboard-icon {
+    height: 40px;
+    filter: var(--color-icon-one);
+}
+
+a img {
+    height: 20px;
+    filter: var(--color-icon-one);
 }
 
 nav, 
@@ -176,13 +243,21 @@ nav,
 
 .container-logo {
     display: flex;
+    align-items: center;
     font-size: 1.5rem;
+    gap: 10px;
 }
 
-nav > a {
-    display: block;
+li {
+    list-style: none;
+    padding: 10px;
+}
+
+li > a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
     text-decoration: none;
     color: var(--color-nav-items);
     font-size: 18px;
-    padding: 10px;
 }

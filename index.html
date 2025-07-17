@@ -9,18 +9,22 @@
 <body>
     <header>
         <div class="container-search">
-            <label for="search" class="search-icon"><img src="" alt="search-icon"></label>
-            <input type="search" id="search" name="search">
+            <form action="get">
+                <label for="search" class="search-icon">
+                    <img src="icons/magnify.svg" alt="search icon">
+                    <input type="search" id="search" name="search">
+                </label>
+            </form>
         </div>
 
         <div class="container-account">
-            <img src="" alt="notification icon" class="notification-icon">
-            <img src="" alt="account icon" class="acc-icon-small">
+            <img src="icons/bell-ring.svg" alt="notification icon" class="notification-icon">
+            <img src="icons/account-circle.svg" alt="account icon" class="acc-icon-small">
             <h4>Morgan Oakley</h2>
         </div>
 
         <div class="container-greeting">
-            <img src="" alt="account icon" class="acc-icon-big">
+            <img src="icons/account-circle.svg" alt="account icon" class="acc-icon-big">
             <div class="user-id">
                 <p>Hi there,</p>
                 <h2>Morgan Oakley (@morgan)</h1>
@@ -37,25 +41,30 @@
 
     <div class="sidebar">
         <div class="container-logo">
-            <img src="" alt="">
+            <img src="icons/view-dashboard.svg" alt="dashboard icon" class="dashboard-icon">
             <div class="title">Dashboard</div>
        </div>
        <nav>
-            <a href="">Home</a>
-            <a href="">Profile</a>
-            <a href="">Messages</a>
-            <a href="">History</a>
-            <a href="">Tasks</a>
-            <a href="">Communities</a>
+            <ul>
+                <li><a href=""><img src="icons/home.svg" aria-hidden="true">Home</a></li>
+                <li><a href=""><img src="icons/account-circle.svg" aria-hidden="true">Profile</a></li>
+                <li><a href=""><img src="icons/message-reply.svg" aria-hidden="true">Messages</a></li>
+                <li><a href=""><img src="icons/clock-time-three.svg" aria-hidden="true">History</a></li>
+                <li><a href=""><img src="icons/file-multiple.svg" aria-hidden="true">Tasks</a></li>
+                <li><a href=""><img src="icons/account-group.svg" aria-hidden="true">Communities</a></li>
+            </ul>
        </nav>
        <nav>
-            <a href="">Settings</a>
-            <a href="">Support</a>
-            <a href="">Privacy</a>
+            <ul>
+                <li><a href=""><img src="icons/cog.svg" aria-hidden="true">Settings</a></li>
+                <li><a href=""><img src="icons/help-circle.svg" aria-hidden="true">Support</a></li>
+                <li><a href=""><img src="icons/shield-lock.svg" aria-hidden="true">Privacy</a></li>
+            </ul>
        </nav>
     </div>
 
     <main>
+        <div class="container">
         <div class="container-projects">
             <h3>Your Projects</h3>
             <div class="project-grid">
@@ -65,7 +74,9 @@
                         <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt tempore deleniti excepturi rerum minima tempora odit assumenda animi, fugit natus omnis.</p>
                     </div>
                     <div class="project-ui">
-
+                        <img src="icons/star-plus-outline.svg" alt="favorite icon">
+                        <img src="icons/eye-plus-outline.svg" alt="view icon">
+                        <img src="icons/share-variant-outline.svg" alt="share icon">
                     </div>
                 </div>
                 <div class="project-card">
@@ -74,7 +85,9 @@
                         <p class="project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                     <div class="project-ui">
-
+                        <img src="icons/star-plus-outline.svg" alt="favorite icon">
+                        <img src="icons/eye-plus-outline.svg" alt="view icon">
+                        <img src="icons/share-variant-outline.svg" alt="share icon">
                     </div>
                 </div>
                 <div class="project-card">
@@ -83,7 +96,9 @@
                         <p class="project-description">Rem fugiat tempore beatae necessitatibus ad. Blanditiis dolores tempore sunt reiciendis provident tempora ut delectus, adipisci, ipsum architecto quaerat impedit similique facere.</p>
                     </div>
                     <div class="project-ui">
-
+                        <img src="icons/star-plus-outline.svg" alt="favorite icon">
+                        <img src="icons/eye-plus-outline.svg" alt="view icon">
+                        <img src="icons/share-variant-outline.svg" alt="share icon">
                     </div>
                 </div>
                 <div class="project-card">
@@ -92,7 +107,9 @@
                         <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dolorum ipsa, quo perferendis voluptatum explicabo, voluptas asperiores accusamus ea unde esse perspiciatis enim excepturi.</p>
                     </div>
                     <div class="project-ui">
-
+                        <img src="icons/star-plus-outline.svg" alt="favorite icon">
+                        <img src="icons/eye-plus-outline.svg" alt="view icon">
+                        <img src="icons/share-variant-outline.svg" alt="share icon">
                     </div>
                 </div>
                 <div class="project-card">
@@ -101,7 +118,9 @@
                         <p class="project-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita corporis vitae nihil praesentium quo quaerat quam?</p>
                     </div>
                     <div class="project-ui">
-
+                        <img src="icons/star-plus-outline.svg" alt="favorite icon">
+                        <img src="icons/eye-plus-outline.svg" alt="view icon">
+                        <img src="icons/share-variant-outline.svg" alt="share icon">
                     </div>
                 </div>
                 <div class="project-card">
@@ -110,6 +129,9 @@
                             <p class="project-description">Odit odio neque mollitia optio earum nisi? Corrupti quidem omnis voluptatibus magni molestiae sapiente ducimus dolore?</p>
                         </div>
                         <div class="project-ui">
+                            <img src="icons/star-plus-outline.svg" alt="favorite icon">
+                            <img src="icons/eye-plus-outline.svg" alt="view icon">
+                            <img src="icons/share-variant-outline.svg" alt="share icon">
                         </div>
                 </div>
             </div>
@@ -137,34 +159,35 @@
             <h3>Trending</h3>
             <div class="users">
                 <div class="user">
-                    <img src="" alt="user-icon">
+                    <img src="icons/account-circle.svg" alt="user-icon">
                     <div>
                         <p class="user-tag">@tegan</p>
                         <p class="user-project">World Peace Builder</p>
                     </div>
                 </div>
                 <div class="user">
-                    <img src="" alt="user-icon">
+                    <img src="icons/account-circle.svg" alt="user-icon">
                     <div>
                         <p class="user-tag">@morgan</p>
                         <p class="user-project">Super Cool Project</p>
                     </div>
                 </div>
                 <div class="user">
-                    <img src="" alt="user-icon">
+                    <img src="icons/account-circle.svg" alt="user-icon">
                     <div>
                         <p class="user-tag">@kendall</p>
                         <p class="user-project">Life Changing App</p>
                     </div>
                 </div>
                 <div class="user">
-                    <img src="" alt="user-icon">
+                    <img src="icons/account-circle.svg" alt="user-icon">
                     <div>
                         <p class="user-tag">@alex</p>
                         <p class="user-project">No Traffic Manager</p>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
 
     </main>
