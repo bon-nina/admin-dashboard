@@ -1,17 +1,22 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:  "Roboto", Arial, Helvetica, sans-serif;
     --color-header: white;
-    --color-sidebar: teal;
+    --color-sidebar: #7E7F9A;
     --color-main: lightgrey;
     --color-nav-items: white;
-    --color-button: teal;
     --color-cards: white;
+    --color-prim-writing: #272838;
     --color-sec-writing: grey;
-    --color-icon-one: invert(93%) sepia(92%) saturate(29%) hue-rotate(238deg) brightness(106%) contrast(100%);
-    --color-icon-two: invert(20%) sepia(7%) saturate(34%) hue-rotate(322deg) brightness(91%) contrast(84%);
+    --color-hover: #f1d6d1;
+    --color-icon-light: invert(93%) sepia(92%) saturate(29%) hue-rotate(238deg) brightness(106%) contrast(100%);
+    --color-icon-dark: invert(14%) sepia(10%) saturate(1394%) hue-rotate(198deg) brightness(100%) contrast(96%);
+    --color-icon-hover: invert(50%) sepia(4%) saturate(1821%) hue-rotate(200deg) brightness(99%) contrast(91%);
 }
 
 body {
@@ -19,6 +24,7 @@ body {
     grid-template: 1fr 6fr / clamp(250px, 20vw , 350px) 1fr;
     height: 100vh;
     width: 100vw;
+    color: var(--color-prim-writing);
 }
 
 header {
@@ -55,7 +61,13 @@ input[type="search"] {
 .notification-icon,
 .acc-icon-small {
     height: 25px;
-    filter: var(--color-icon-two);
+    filter: var(--color-icon-dark);
+}
+
+.search-icon img:hover,
+.notification-icon:hover,
+.acc-icon-small:hover {
+    filter: var(--color-icon-hover);
 }
 
 .acc-icon-big {
@@ -90,9 +102,14 @@ button {
     width: 75px;
     height: 30px;
     border-radius: 15px;
-    border-style: none;
+    border: 1px solid var(--color-sidebar);
     color: var(--color-header);
     background-color: var(--color-sidebar);
+}
+
+button:hover {
+    color: var(--color-sidebar);
+    background-color: var(--color-header);
 }
 
 main {
@@ -126,7 +143,12 @@ main {
     grid-template-rows: 2fr 1fr;
     background-color: var(--color-cards);
     border-radius: 10px;
+    border-left: 8px solid var(--color-hover);
     height: 250px;
+}
+
+.project-card:hover {
+    border: 2px solid var(--color-sec-writing);
 }
 
 h3 {
@@ -143,7 +165,9 @@ h3 {
 }
 
 .project-description {
+    height: 160px;
     color: var(--color-sec-writing);
+    overflow: auto;
 }
 
 .project-ui {
@@ -156,7 +180,11 @@ h3 {
 
 .project-ui img {
     height: 20px;
-    filter: var(--color-icon-two);
+    filter: var(--color-icon-dark);
+}
+
+.project-ui img:hover {
+    filter: var(--color-icon-hover);
 }
 
 .announcements {
@@ -190,13 +218,20 @@ h3 {
 }
 
 .users {
-    padding: 25px;
+    padding: 20px;
 }
 
 .user {
     padding: 10px 0px;
     display: flex;
     gap: 10px;
+}
+
+.user > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
 }
 
 .user-tag {
@@ -223,12 +258,12 @@ h3 {
 
 .dashboard-icon {
     height: 40px;
-    filter: var(--color-icon-one);
+    filter: var(--color-icon-light);
 }
 
 a img {
     height: 20px;
-    filter: var(--color-icon-one);
+    filter: var(--color-icon-light);
 }
 
 nav, 
@@ -260,4 +295,8 @@ li > a {
     text-decoration: none;
     color: var(--color-nav-items);
     font-size: 18px;
+}
+
+li > a:hover {
+    text-decoration: underline;
 }
