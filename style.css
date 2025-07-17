@@ -58,20 +58,30 @@ input[type="search"] {
 }
 
 .search-icon img,
-.notification-icon,
-.acc-icon-small {
+.notification-icon {
     height: 25px;
     filter: var(--color-icon-dark);
 }
 
 .search-icon img:hover,
-.notification-icon:hover,
-.acc-icon-small:hover {
+.notification-icon:hover {
     filter: var(--color-icon-hover);
 }
 
+.acc-icon-small {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--color-prim-writing);
+}
+
 .acc-icon-big {
-    height: 50px;
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--color-prim-writing);
 }
 
 .container-account {
@@ -212,6 +222,10 @@ h3 {
     font-size: 0.9rem;;
 }
 
+.news-title:hover {
+    text-decoration: underline;
+}
+
 .trending {
     grid-area: 2 / 2 / 3 / 3;
     margin: 0px 20px 0px 0px;
@@ -238,6 +252,10 @@ h3 {
     font-size: 0.8rem;
 }
 
+.user-tag:hover {
+    text-decoration: underline;
+}
+
 .user-project {
     color: var(--color-sec-writing);
     font-size: 0.8rem;
@@ -245,6 +263,10 @@ h3 {
 
 .user img {
     height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--color-prim-writing);
 }
 
 .sidebar {
